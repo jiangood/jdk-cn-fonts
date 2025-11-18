@@ -1,5 +1,5 @@
 #FROM openjdk:17-alpine 官方已经不推荐使用了
-FROM amazoncorretto:17
+FROM amazoncorretto:21
 
 # 安装依赖工具（wget/unzip）
 RUN yum install -y wget unzip
