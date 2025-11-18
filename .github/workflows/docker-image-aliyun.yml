@@ -24,6 +24,6 @@ jobs:
           file: ./17/Dockerfile
           push: true
           tags: |
-            registry.cn-hangzhou.aliyuncs.com/jiangood/jdk:17
+            registry.cn-hangzhou.aliyuncs.com/jiangood/jdk-cn-fonts:17
           build-args: |
             VERSION=${{ steps.meta.outputs.tag }}
