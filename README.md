@@ -1,0 +1,2 @@
+包含中文字体的jdk镜像，基于amazoncorretto
+
