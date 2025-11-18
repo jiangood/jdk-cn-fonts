@@ -18,12 +18,19 @@ jobs:
           username: hustme
           password: ${{ secrets.ALIYUN_REGISTRY_PASSWORD }}
 
-      - name: jdk
+      - name: jdk-17
         uses: docker/build-push-action@v6
         with:
           file: ./17/Dockerfile
           push: true
           tags: |
             registry.cn-hangzhou.aliyuncs.com/jiangood/jdk-cn-fonts:17
-          build-args: |
-            VERSION=${{ steps.meta.outputs.tag }}
+
+      - name: jdk-21
+        uses: docker/build-push-action@v6
+        with:
+          file: ./21/Dockerfile
+          push: true
+          tags: |
+            registry.cn-hangzhou.aliyuncs.com/jiangood/jdk-cn-fonts:21
+            registry.cn-hangzhou.aliyuncs.com/jiangood/jdk-cn-fonts:latest
